@@ -1,0 +1,670 @@
+:root {
+    --colorAmarillo: #ffd039;
+    --colorRojo: #e93234;
+    --colorNegro: #353535;
+}
+
+*, ::before, ::after {
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+    font-family: 'Nunito', sans-serif;
+    color: var(--colorNegro); 
+}
+
+/* html,body {
+    width: 100%;
+} */
+body {
+    overflow-x: hidden; 
+}
+
+header {
+    font-weight: bold; 
+    font-size: 1.5em; 
+    width: 100%; 
+    height: 100px; 
+    position: fixed; 
+    z-index: 10;
+    transition: all .3s ease-in; 
+}
+
+
+nav > ul {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    width: 100%; 
+    position: absolute; 
+}
+
+.logo {
+    flex: 1; 
+    width: 150px; 
+    height: 100px; 
+    background-image: url(assets/pharmacylogo.svg);
+    background-size: 150px 100px; 
+    background-repeat: no-repeat; 
+  
+}
+ul > li:nth-child(1) {
+    margin-left: 1em; 
+}
+ul > li {
+    list-style: none; 
+    padding-right: 1em; 
+}
+
+ul > li > a {
+    text-decoration: none; 
+    position: relative; 
+}
+
+.icons {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: row; 
+}
+.icons > a {
+    margin: .3em; 
+}
+
+.icon-fb, .icon-in, .icon-tw {
+
+    display: block; 
+    width: 30px; 
+    height: 30px; 
+    background-repeat: no-repeat; 
+    background-size: 30px 30px; 
+    opacity: .6; 
+    transition: opacity .5s ease-in; 
+}
+.icon-fb:hover, .icon-in:hover, .icon-tw:hover {
+    opacity: 1;
+}
+
+.icon-in {
+    background-image: url(assets/instagram.png); 
+}
+.icon-tw {
+    background-image: url(assets/twitter.png); 
+}
+.icon-fb {
+    background-image: url(assets/facebook.png); 
+}
+
+
+.active-bar {
+    display: block; 
+    position: absolute;
+    bottom: 2px; 
+    height: 4px; 
+    background-color: var(--colorRojo); 
+    border-radius: 2px; 
+    transition: .4s all ease-in; 
+    opacity: 0;
+}
+
+main {
+    width: 100vw; 
+    position: relative;
+    top: 100px; 
+    overflow: hidden; 
+}
+
+
+/*Secciones*/
+section {
+    text-align: center; 
+}
+h1 {
+    font-size: 3em; 
+    padding-top: 1em; 
+}
+
+.pharmacy {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column;
+    width: 100%; 
+    height: 100vh;
+    background-color: rgba(255, 209, 57, 0.6); 
+    background-image: url(https://images.unsplash.com/photo-1547489432-cf93fa6c71ee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
+    background-repeat: no-repeat;  
+    background-size: cover; 
+    background-blend-mode: overlay; 
+
+}
+
+.pharmacy .logo {
+    width: 500px; 
+    height: 150px;
+    background-size: 500px 450px; 
+}
+
+.info-pharmacy {
+    font-size: 2.5em; 
+    text-transform: uppercase; 
+    position: absolute; 
+    transform: translateY(5em); 
+    color: var(--colorRojo); 
+    text-shadow: 1px 1px 1px #353535; 
+}
+
+.productos {
+    background-color: var(--colorRojo); 
+    padding-bottom: 2em; 
+}
+.medicinas {
+    position: relative;
+    background-color: transparent; 
+}
+
+.color {
+    position: absolute; 
+    width: 500px; 
+    height: 350px;
+    margin: 1em;
+    background-color: var(--colorAmarillo); 
+    transition: all .5s ease-in-out; 
+    opacity: 0;
+    cursor: pointer; 
+}
+.color:hover {
+    opacity: .8; 
+    box-shadow: 2px 2px 5px var(--colorNegro); 
+    
+}
+
+.color::before {
+    content: ''; 
+    display: block; 
+    width: 500px; 
+    height: 350px; 
+    background-color: transparent; 
+    border: 5px solid var(--colorAmarillo); 
+    transition: all .5s ease-in-out;
+}
+.color:hover::before{
+    transform: scale(1.1, 1.1); 
+}
+
+
+.content-productos {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex-wrap: wrap; 
+}
+
+.productos .medicinas img, .productos .descartables img, .productos .quirurgicos img, .productos .equipos img {
+    width: 500px;
+    height: 350px;  
+    margin: 1em; 
+    cursor: pointer; 
+}
+.icon-medicina, .icon-descartable, .icon-quirurgicos, .icon-equipos {
+
+    background-repeat: no-repeat; 
+    background-size: 150px 150px; 
+    background-position: 150px 100px; 
+}
+.icon-medicina {
+    background-image: url(assets/medicine.png); 
+}
+.icon-descartable {
+    background-image: url(assets/glove.png);    
+}
+
+.icon-quirurgicos {
+    background-image: url(assets/vaccine.png); 
+}
+.icon-equipos {
+    background-image: url(assets/thermometer.png); 
+}
+
+.asistencia {
+    background-color: var(--colorAmarillo);
+    
+}
+
+.show-asistencia { display: none;}
+
+.contactanos {
+    background-color: var(--colorRojo);
+    width: 100%; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    
+}
+
+
+.content-contactanos {
+    display: flex; 
+    align-items: flex-start; 
+    flex-direction: column; 
+    width: 50%; 
+}
+.recipe {
+    background-image: url(assets/prescription.svg); 
+    width: 300px; 
+    height: 450px;
+    background-repeat: no-repeat; 
+    background-size: 300px 450px; 
+    transition: all .5s ease-in-out; 
+}
+.fadein {
+    animation-name: fadeIn; 
+    animation-duration: 3s; 
+    animation-direction: alternate; 
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.recipe:hover {
+    transform: translateY(20px); 
+}
+
+
+.content-contactanos input{
+    border: none; 
+    outline: 0; 
+    border-bottom: 1px solid var(--colorNegro);
+    margin-bottom: 1em; 
+    font-size: 2em; 
+    
+}
+.content-contactanos textarea {
+    width:400px; 
+    border: none; 
+    outline: 0; 
+    border-bottom: 1px solid var(--colorNegro);
+    font-size: 2em;
+}
+.content-contactanos button{
+    border: none; 
+    padding: .5em 1em;
+    font-size: 1.5em; 
+    margin: .5em 0;   
+    background-color: var(--colorAmarillo); 
+    cursor: pointer; 
+    transition: background .5s ease-in-out; 
+    color: var(--colorNegro); 
+    outline: 0; 
+}
+.content-contactanos button:hover {
+    background-color: var(--colorNegro); 
+    color: var(--colorRojo);
+}
+
+.content-contactanos input, .content-contactanos textarea {
+    background-color: transparent; 
+
+}
+
+
+
+/*Secciones*/
+
+footer {
+    text-align: center; 
+    background-color: var(--colorAmarillo); 
+}
+footer > span {
+    display: block; 
+    color: var(--colorNegro); 
+    font-size: 1.5em; 
+    padding: 1em; 
+}
+
+/*Estilos del Botón*/
+/*Botón Up*/
+.btn-up {
+    position: fixed;
+    z-index: 15;  
+    bottom: 30px; 
+    right: 10px; 
+    width: 60px; 
+    height: 60px; 
+    border-radius: 50%; 
+    background-image: url(assets/download.png);  
+    background-size: 30px 30px; 
+    background-repeat: no-repeat; 
+    background-position: 13px 13px; 
+    background-color: var(--colorNegro); 
+    border: 2px solid var(--colorAmarillo); 
+    transition: all .5s ease-in-out; 
+    
+}
+
+.btn-up:hover {
+    border: 2px solid var(--colorNegro); 
+    background-color: var(--colorAmarillo); 
+}
+
+/*Estilos del modal*/
+
+.modal {
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    right: 0;
+    bottom: 0;  
+    z-index: 20; 
+    width: 100%; 
+    height: 100%; 
+    overflow: hidden;
+    background-color: rgba(53, 53, 53, 0.7); 
+    visibility: hidden; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column; 
+    opacity: 0;
+    transition: .5s ease all; 
+
+}
+
+.container-modal {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column; 
+    width: 80%; 
+    background-color: var(--colorAmarillo); 
+    border-radius: 20px; 
+}
+
+.modal span {
+    position: absolute; 
+    top: 10px; 
+    right: 30px; 
+    padding-left: 17px; 
+    font-weight: bold; 
+    font-size: 1.5em;
+    line-height: 2.3em; 
+    display: block; 
+    cursor: pointer;
+    color: var(--colorNegro);
+    width: 50px; 
+    height: 50px; 
+    background-color: var(--colorAmarillo); 
+    border-radius: 50%;    
+    transition: .5s ease all; 
+}
+.modal span:hover {
+    background-color: var(--colorNegro); 
+    color: var(--colorAmarillo); 
+    transform: scale(1.2); 
+}
+
+
+.message-modal {
+    width: 80%; 
+    color: var(--colorRojo); 
+    text-align: center; 
+    margin: 1.5em auto; 
+}
+
+.modal-img {
+    padding-top: 1.5em; 
+    width: 700px; 
+    height: 500px; 
+}
+.abrir-modal {
+   opacity: 1;
+}
+.cerrar-modal {
+    opacity: 0; 
+}
+
+
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+  
+
+    
+}
+  
+/* 
+##Device = Laptops, Desktops
+##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+
+
+}
+
+/* 
+##Device = Tablets, Ipads (portrait)
+##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    
+
+}
+
+/* 
+##Device = Tablets, Ipads (landscape)
+##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+    .logo {
+
+        background-size: 150px 100px; 
+    }
+
+    .modal-img {
+        width: 400px;
+        height: 350px; 
+    }
+
+    .asistencia { 
+        height: 90vh; 
+    }
+    .content-contactanos {
+        height: 50vh;
+    }
+    
+  
+}
+
+/* 
+##Device = Low Resolution Tablets, Mobiles (Landscape)
+##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 320px) and (max-width: 767px) {
+
+    header {
+        height: 50px; 
+        font-weight: bold; 
+        font-size: 1.5em; 
+        width: 100%; 
+        position: fixed; 
+        z-index: 10;
+        transition: all .3s ease-in; 
+    }
+
+    main {
+        top: 50px; 
+    }
+
+    .active-bar {
+        display: none; 
+    }
+
+    nav > ul {
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        flex-direction: column; 
+        position: absolute;
+        width: 100%; 
+        height: 100vh; 
+        transition: all 1s ease-in-out; 
+        text-align: center; 
+
+    }
+
+    ul > li {
+        
+        transition: all 1s ease-in-out;
+    }
+
+    ul > li:nth-child(1) {
+        display: none; 
+    }
+
+    ul > li:nth-child(3),  ul>li:nth-child(4),  ul>li:nth-child(5),  ul>li:nth-child(6)  {
+        width: 100%; 
+        background-color: rgba(233, 50, 53, 0.9); 
+        font-size: 2em; 
+        padding-top: 1em; 
+        padding-bottom: 1em; 
+        padding-left: 0; 
+        padding-right: 0; 
+        text-align: center; 
+        transform: translate(-100%, 34px); 
+    }
+
+    ul > li:nth-child(3).show,  ul>li:nth-child(4).show,  ul>li:nth-child(5).show,  ul>li:nth-child(6).show  {
+        
+        transform: translate(0, 34px); 
+    
+    }
+
+    ul > li:nth-child(3),  ul>li:nth-child(4),  ul>li:nth-child(5),  ul>li:nth-child(6)  {
+        
+        transform: translate(-100%, 34px); 
+    
+    }
+
+    .menu-btn {
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        flex-direction: column;  
+        height: 15vh;
+        position: absolute;
+        width: 50px; 
+        left: 10px; 
+        top: -25px; 
+        padding-right: 0; 
+     
+    }
+
+    .menu-btn .icon {
+        width: 35px; 
+        height: 4px;
+        background-color: var(--colorRojo); 
+        border-radius: 5px;
+        position: relative;
+        transition-delay: .4s;
+    }
+    .menu-btn .icon::before, .menu-btn .icon::after {
+        content: '';
+        width: 35px; 
+        height: 4px;
+        background-color:  var(--colorRojo); 
+        border-radius: 5px;
+        position: absolute;
+        left: 0; 
+        transition: top .4s .4s, transform .4s 0s; 
+    }
+    .menu-btn .icon::before {
+        top: -10px;
+      
+    }
+    .menu-btn .icon::after {
+        top: 10px;
+    }
+
+    .menu-btn.active .icon {
+        background-color: transparent;
+    }
+
+    .menu-btn.active .icon::before, .menu-btn.active .icon::after {
+        transition: top .4s 0s, transform .4s .4s; 
+    }
+
+    .menu-btn.active .icon::before {
+     
+        top: 0;
+        transform: rotate(-45deg);
+    }
+
+    .menu-btn.active .icon::after {
+      
+        top: 0;
+        transform: rotate(45deg);
+    }
+
+    .btn-up {
+        display: none; 
+    }
+
+    .info-pharmacy {
+        font-size: 1em; 
+    }
+    .asistencia {
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        flex-direction: column; 
+    }
+    .asistencia img {
+        width: 400px; 
+        height: 300px;
+    }
+    .asistencia p {
+        margin: 1em; 
+        width: 70%; 
+    }
+
+    .show-asistencia { 
+        display: block;
+    }
+
+    .content-contactanos {
+        height: 50vh;
+        margin-bottom: 1.5em; 
+    }
+
+    .recipe {
+        display: none;  
+    }
+}
+
+/* 
+##Device = Most of the Smartphones Mobiles (Portrait)
+##Screen = B/w 320px to 479px
+*/
+
+/* @media (min-width: 320px) and (max-width: 480px) {
+
+
+
+} */

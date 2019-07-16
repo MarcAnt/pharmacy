@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PharmaDay</title>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/slider.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul id="menu">
+                <li class="logo"><a href="#"></a></li>
+                <li class="menu-btn" id="menu-btn"><div class="icon"></div></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#asistencia">Asistencia</a></li>
+                <li><a href="#contactanos">Contáctanos</a></li>
+                <li class="icons"><a href="#" class="icon-fb"></a><a href="#" class="icon-tw"></a><a href="#" class="icon-in"></a></li>
+                <li><span class="active-bar"></span></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="pharmacy">
+            <div class="logo"></div>
+            <p class="info-pharmacy">Somos una empresa ficticia de farmacia</p>
+        </section>
+
+        <section class="productos" id="productos">
+            <h1>Productos</h1>
+            <div class="content-productos">
+                <div class="medicinas" id="medicinas">
+                    <div class="color icon-medicina"></div>
+                    <img src="https://images.unsplash.com/photo-1471864190281-a93a3070b6de?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="medicinas">
+                </div>
+                <div class="descartables" id="descartables">
+                    <div class="color icon-descartable"></div>
+                    <img src="https://images.unsplash.com/photo-1560581229-9fdfc4d14a05?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="descartables">
+                </div>
+                <div class="quirurgicos" id="quirurgicos">
+                    <div class="color icon-quirurgicos"></div>
+                    <img src="https://images.unsplash.com/photo-1514416205405-075ab2f15964?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" >
+                </div>
+                <div class="equipos" id="equipos">
+                    <div class="color icon-equipos"></div>
+                    <img src="https://images.unsplash.com/photo-1512102438733-bfa4ed29aef7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80" alt="equipos">
+                </div>
+            </div>
+        </section>
+
+        <section class="asistencia" id="asistencia">
+            <h1>Asistencia</h1>
+            <img class="show-asistencia" src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1189&q=80" >
+            <p class="show-asistencia">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates dolorem nulla odio provident odit labore quibusdam magni aperiam velit, voluptatibus obcaecati deserunt, totam illo at temporibus ipsam enim recusandae dignissimos.</p>
+
+            <!-- Slider -->
+            <div class="content-slider" id="content-slider"></div>
+           
+        </section>
+
+        <section class="contactanos" id="contactanos">
+            <div class="content-contactanos">
+                <h1>Contáctanos</h1>
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre">
+                <label for="comentarios">Comentarios</label>
+                <textarea id="comentarios"></textarea>
+                <button>Enviar</button>
+            </div>
+            <div class="recipe" id="recipe"></div>
+        </section>
+
+        <footer>
+            <span>Copyright © Marcos Esqueda 2019</span>
+        </footer>
+    </main>    
+
+    <div class="modal" id="modal">
+        <span id="cerrar">X</span>
+        <div class="container-modal">
+            <img src="" id="modal-img" class="modal-img">
+            <p class="message-modal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa nisi incidunt saepe, soluta possimus sit enim consectetur repellendus voluptate eveniet aliquam suscipit sed! Maxime magni quasi perferendis. Alias, dolores perferendis?
+
+            </p>
+        </div>
+    </div>
+    <script src="index.js"></script>
+    <script src="assets/mini_slider.js"></script>
+</body>
+</html>
