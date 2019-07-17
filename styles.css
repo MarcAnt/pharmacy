@@ -571,7 +571,7 @@ footer > span {
         position: absolute;
         width: 50px; 
         left: 10px; 
-        top: -25px; 
+        top: -30px; 
         padding-right: 0; 
      
     }
@@ -738,7 +738,7 @@ footer > span {
         position: absolute;
         width: 50px; 
         left: 10px; 
-        top: -25px; 
+        top: -30px; 
         padding-right: 0; 
      
     }
@@ -792,26 +792,28 @@ footer > span {
     .btn-up {
         display: none; 
     }
+    h1 {font-size:2em;}
     .pharmacy {
         display: flex; 
         justify-content: center; 
         align-items: center; 
         flex-direction: column;
         width: 100%; 
-        height: 100vh;
+        height: 50vh;
         background-image: none; 
         background-color: rgba(254, 208, 56, 0.7); 
     
     }
     
     .pharmacy .logo {
-        width: 400px; 
-        height: 450px;
-        background-size: 400px 450px; 
+        width: 200px; 
+        height: 250px;
+        background-size: 200px 250px; 
     }
 
     .info-pharmacy {
-        font-size: 1em; 
+        font-size: 1.1em; 
+        width: 50%; 
     }
     .productos {
         width: 100%; 
@@ -828,8 +830,8 @@ footer > span {
         flex-direction: column; 
     }
     .asistencia img {
-        width: 400px; 
-        height: 300px;
+        width: 200px; 
+        height: 150px;
     }
     .asistencia p {
         margin: 1em; 
@@ -843,11 +845,23 @@ footer > span {
     .content-slider {
         display: none; 
     }
+    /* Clase del slider*/
 
     .content-contactanos {
         width: 90%; 
         height: 50vh;
         margin-bottom: 1.5em; 
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+    }
+
+    .content-contactanos input, .content-contactanos textarea {
+        font-size: 1.5em; 
+    }
+
+    .content-contactanos textarea {
+        width: 265px; 
     }
 
     /* .content-contactanos input {
