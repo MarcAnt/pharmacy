@@ -663,8 +663,200 @@ footer > span {
 ##Screen = B/w 320px to 479px
 */
 
-/* @media (min-width: 320px) and (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 480px) {
 
+    header {
+        height: 50px; 
+        font-weight: bold; 
+        font-size: 1.5em; 
+        width: 100%; 
+        position: fixed; 
+        z-index: 10;
+        transition: all .3s ease-in; 
+    }
 
+    main {
+        top: 50px; 
+    }
 
-} */
+    .active-bar {
+        display: none; 
+    }
+
+    nav > ul {
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        flex-direction: column; 
+        position: absolute;
+        width: 100%; 
+        height: 100vh; 
+        transition: all 1s ease-in-out; 
+        text-align: center; 
+
+    }
+
+    ul > li {
+        
+        transition: all 1s ease-in-out;
+    }
+
+    ul > li:nth-child(1) {
+        display: none; 
+    }
+
+    ul > li:nth-child(3),  ul>li:nth-child(4),  ul>li:nth-child(5),  ul>li:nth-child(6)  {
+        width: 100%; 
+        background-color: rgba(233, 50, 53, 0.9); 
+        font-size: 2em; 
+        padding-top: 1em; 
+        padding-bottom: 1em; 
+        padding-left: 0; 
+        padding-right: 0; 
+        text-align: center; 
+        transform: translate(-100%, 34px); 
+    }
+
+    ul > li:nth-child(3).show,  ul>li:nth-child(4).show,  ul>li:nth-child(5).show,  ul>li:nth-child(6).show  {
+        
+        transform: translate(0, 34px); 
+    
+    }
+
+    ul > li:nth-child(3),  ul>li:nth-child(4),  ul>li:nth-child(5),  ul>li:nth-child(6)  {
+        
+        transform: translate(-100%, 34px); 
+    
+    }
+
+    .menu-btn {
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        flex-direction: column;  
+        height: 15vh;
+        position: absolute;
+        width: 50px; 
+        left: 10px; 
+        top: -25px; 
+        padding-right: 0; 
+     
+    }
+
+    .menu-btn .icon {
+        width: 35px; 
+        height: 4px;
+        background-color: var(--colorRojo); 
+        border-radius: 5px;
+        position: relative;
+        transition-delay: .4s;
+    }
+    .menu-btn .icon::before, .menu-btn .icon::after {
+        content: '';
+        width: 35px; 
+        height: 4px;
+        background-color:  var(--colorRojo); 
+        border-radius: 5px;
+        position: absolute;
+        left: 0; 
+        transition: top .4s .4s, transform .4s 0s; 
+    }
+    .menu-btn .icon::before {
+        top: -10px;
+      
+    }
+    .menu-btn .icon::after {
+        top: 10px;
+    }
+
+    .menu-btn.active .icon {
+        background-color: transparent;
+    }
+
+    .menu-btn.active .icon::before, .menu-btn.active .icon::after {
+        transition: top .4s 0s, transform .4s .4s; 
+    }
+
+    .menu-btn.active .icon::before {
+     
+        top: 0;
+        transform: rotate(-45deg);
+    }
+
+    .menu-btn.active .icon::after {
+      
+        top: 0;
+        transform: rotate(45deg);
+    }
+
+    .btn-up {
+        display: none; 
+    }
+    .pharmacy {
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        flex-direction: column;
+        width: 100%; 
+        height: 100vh;
+        background-image: none; 
+        background-color: rgba(254, 208, 56, 0.7); 
+    
+    }
+    
+    .pharmacy .logo {
+        width: 400px; 
+        height: 450px;
+        background-size: 400px 450px; 
+    }
+
+    .info-pharmacy {
+        font-size: 1em; 
+    }
+    .productos {
+        width: 100%; 
+    }
+    .content-productos .medicinas img, .content-productos .descartables img, .content-productos .quirurgicos img, .content-productos .equipos img {
+      width: 300px; 
+      height: 250px; 
+    }
+
+    .asistencia {
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        flex-direction: column; 
+    }
+    .asistencia img {
+        width: 400px; 
+        height: 300px;
+    }
+    .asistencia p {
+        margin: 1em; 
+        width: 70%; 
+    }
+
+    .show-asistencia { 
+        display: block;
+    }
+    /* Clase del slider*/
+    .content-slider {
+        display: none; 
+    }
+
+    .content-contactanos {
+        width: 90%; 
+        height: 50vh;
+        margin-bottom: 1.5em; 
+    }
+
+    /* .content-contactanos input {
+        margin: 1em; 
+        width: 100%; 
+    } */
+
+    .recipe {
+        display: none;  
+    }
+
+}
